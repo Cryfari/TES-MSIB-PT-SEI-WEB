@@ -36,7 +36,7 @@
             <td><?= $locations->data[$i]->negara ?></td>
             <td>
               <a href="<?= base_url() ?>location/update/<?= $locations->data[$i]->id ?>" class="btn btn-warning">edit</a>
-              <a href="<?= base_url() ?>location/delete/<?= $locations->data[$i]->id ?>" class="btn btn-danger" onclick="return confirm('yakin menghapus data?');">hapus</a>
+              <a href="<?= base_url() ?>location/delete/<?= $locations->data[$i]->id ?>" class="btn btn-danger" onclick="return confirm('yakin menghapus lokasi?');">hapus</a>
             </td>
           </tr>
           <?php endfor; ?>
