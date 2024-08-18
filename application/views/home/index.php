@@ -47,7 +47,7 @@
             <?php endif ?>
             <td>
               <a href="<?= base_url() ?>home/update/<?= $projects->data[$i]->id ?>" class="btn btn-warning">edit</a>
-              <a href="<?= base_url() ?>home/delete/<?= $projects->data[$i]->id ?>" class="btn btn-danger">hapus</a>
+              <a href="<?= base_url() ?>home/delete/<?= $projects->data[$i]->id ?>" class="btn btn-danger" onclick="return confirm('yakin menghapus proyek?');">hapus</a>
             </td>
           </tr>
           <?php endfor ?>
