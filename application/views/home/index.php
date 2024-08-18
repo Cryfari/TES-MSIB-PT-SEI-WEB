@@ -20,28 +20,19 @@
           </tr>
         </thead>
         <tbody>
+        <?php for($i = 0; $i < count($projects->data); $i++) : ?>
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>Otto</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>Otto</td>
-            <td>Otto</td>
+            <th scope="row"><?= $i+1 ?></th>
+            <td><?= $projects->data[$i]->namaProyek ?></td>
+            <td><?= $projects->data[$i]->client ?></td>
+            <td><?= date_format(date_create($projects->data[$i]->tanggalMulai),"Y/m/d H:i:s") ?></td>
+            <td><?= date_format(date_create($projects->data[$i]->tanggalSelesai),"Y/m/d H:i:s") ?></td>
+            <td><?= $projects->data[$i]->pimpinanProyek ?></td>
+            <td><?= $projects->data[$i]->keterangan ?></td>
+            <td><?= $projects->data[$i]->lokasi->namaLokasi ?></td>
             <td><a href="" class="btn btn-warning">edit</a><a href="" class="btn btn-danger">happus</a></td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>Otto</td>
-            <td><a href="" class="btn btn-warning">edit</a><a href="" class="btn btn-danger">happus</a></td>
-          </tr>
+          <?php endfor ?>
         </tbody>
       </table>
   </div>
