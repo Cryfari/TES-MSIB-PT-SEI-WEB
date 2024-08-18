@@ -3,7 +3,7 @@
     <div class="col-md-8">
     <div class="card">
       <div class="card-header">
-      Form Tambah Lokasi
+      Form Update Lokasi
       </div>
       <div class="card-body"> 
         <form action="" method="post">

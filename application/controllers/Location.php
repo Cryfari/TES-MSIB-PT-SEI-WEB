@@ -41,8 +41,6 @@ class Location extends CI_Controller {
 					redirect('location');
 				}
 			}
-			var_dump($response->getStatusCode());
-			var_dump($response->getBody());
 			$this->session->set_flashdata('flash', 'berhasil ditambahkan');
 			redirect('location');
 		}
@@ -87,7 +85,6 @@ class Location extends CI_Controller {
 			$this->load->view('location/updateLocationForm', $data);
 			$this->load->view('templates/footer');
 		}else{
-			$client = new GuzzleHttp\Client();
 			$data = [
 				'namaLokasi' => $this->input->post('namaLokasi', true),
 				'kota'=> $this->input->post('kota', true),
@@ -101,8 +98,6 @@ class Location extends CI_Controller {
 					show_404();
 				}
 			}
-			var_dump($response->getStatusCode());
-			var_dump($response->getBody());
 			$this->session->set_flashdata('flash', 'berhasil diubah');
 			redirect('location');
 		}
